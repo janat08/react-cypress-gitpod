@@ -5,7 +5,7 @@ tasks:
   - name: Open cypress
     command: |
       gp sync-await install
-      npx cypress install --force
+      printf 'y' | npx cypress install --force
       npx cypress verify
       npx cypress info
       yarn cypress:open
